@@ -1,0 +1,24 @@
+﻿@section scripts{
+
+    <script src="~/ItemsApp.js"></script>
+}
+
+<h2>Items Catalog</h2>
+<div ng-app="ItemsApp" class="row">
+    <div ng-controller="ItemsController">
+        {{message}}
+    </div>
+    <div ng-controller="ItemsController">
+        <table class="table">
+            <tr ng-repeat="item in Items">
+                <td><img src={{item.image}} height="100" width="100" alt={{item.item_name}} /></td>
+                <td>
+                    {{item.item_name}} 
+                    <br>
+                    ${{item.item_price}}
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
